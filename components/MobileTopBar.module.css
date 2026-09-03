@@ -101,6 +101,10 @@
   border-bottom: 1px solid var(--border-cream);
 }
 
+.menuLink[aria-current="page"] {
+  color: var(--gold);
+}
+
 .menuLink:last-of-type {
   border-bottom: 0;
 }

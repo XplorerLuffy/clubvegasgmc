@@ -11,8 +11,10 @@ export default function Home() {
       <MobileTopBar />
       <div style={{ background: "var(--surface)" }}>
         <Hero />
-        <Marquee />
-        <Gallery />
+        <main id="main-content">
+          <Marquee />
+          <Gallery />
+        </main>
       </div>
       <Footer />
       <MobileStickyBar />

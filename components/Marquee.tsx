@@ -15,7 +15,7 @@ export default function Marquee() {
   const loop = [...ITEMS, ...ITEMS];
 
   return (
-    <div className={styles.band}>
+    <div className={styles.band} aria-hidden="true">
       <div className={styles.track}>
         {loop.map((item, i) => (
           <span key={i} className={styles.item}>

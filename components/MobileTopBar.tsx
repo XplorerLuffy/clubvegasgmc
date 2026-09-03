@@ -1,24 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { navLinks } from "@/lib/site-config";
 import styles from "./MobileTopBar.module.css";
-
-const LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/karaoke", label: "Karaoke" },
-  { href: "/drinks", label: "Drinks" },
-  { href: "/nights", label: "Nights" },
-  { href: "/find-us", label: "Find Us" },
-];
 
 export default function MobileTopBar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className={styles.bar}>
       <Link href="/" className={styles.brand}>
-        <img className={styles.brandLogo} src="/assets/vegas-logo.jpeg" alt="" />
+        <Image
+          className={styles.brandLogo}
+          src="/assets/vegas-logo.jpeg"
+          alt=""
+          width={32}
+          height={32}
+          priority
+        />
         <span className={styles.brandName}>Vegas</span>
       </Link>
       <div className={styles.right}>
@@ -40,11 +43,12 @@ export default function MobileTopBar() {
 
       {open && (
         <nav className={styles.menu} aria-label="Mobile">
-          {LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={styles.menuLink}
+              aria-current={pathname === link.href ? "page" : undefined}
               onClick={() => setOpen(false)}
             >
               {link.label}

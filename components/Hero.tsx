@@ -1,14 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
+import { business, navLinks } from "@/lib/site-config";
 import ImagePlaceholder from "./ImagePlaceholder";
 import styles from "./Hero.module.css";
-
-const NAV_LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/karaoke", label: "Karaoke" },
-  { href: "/drinks", label: "Drinks" },
-  { href: "/nights", label: "Nights" },
-  { href: "/find-us", label: "Find Us" },
-];
 
 export default function Hero() {
   return (
@@ -24,11 +18,18 @@ export default function Hero() {
         <div className={styles.navWrap}>
           <div className={styles.navPill}>
             <Link href="/" className={styles.navBrand}>
-              <img className={styles.navLogo} src="/assets/vegas-logo.jpeg" alt="" />
+              <Image
+                className={styles.navLogo}
+                src="/assets/vegas-logo.jpeg"
+                alt=""
+                width={36}
+                height={36}
+                priority
+              />
               <span className={styles.navBrandName}>Vegas</span>
             </Link>
             <nav className={styles.navLinks} aria-label="Primary">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} className={styles.navLink}>
                   {link.label}
                 </Link>
@@ -66,9 +67,11 @@ export default function Hero() {
               Open · until 1am
             </span>
             <span>·</span>
-            <span>Riverside Block, GMC</span>
+            <span>
+              Riverside Block, {business.region}
+            </span>
             <span>·</span>
-            <span>18+ after 9pm</span>
+            <span>{business.agePolicyShort}</span>
           </div>
         </div>
       </header>
@@ -80,7 +83,14 @@ export default function Hero() {
         </div>
         <div className={styles.scrimBottom} />
         <div className={styles.contentMobile}>
-          <img className={styles.logoMobile} src="/assets/vegas-logo.jpeg" alt="Vegas Lounge & Bar" />
+          <Image
+            className={styles.logoMobile}
+            src="/assets/vegas-logo.jpeg"
+            alt="Vegas Lounge & Bar"
+            width={88}
+            height={88}
+            priority
+          />
           <div className={styles.kicker}>Karaoke lounge · Gelephu</div>
           <h1 className={styles.headlineMobile}>
             Sing like the lights <em>are on you.</em>

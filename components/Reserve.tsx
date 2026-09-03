@@ -95,7 +95,12 @@ export default function Reserve() {
               />
             </label>
           </div>
-          <button type="submit" className={`btn btn-primary ${styles.submit}`}>
+          <button
+            type="submit"
+            className={`btn btn-primary ${styles.submit}`}
+            disabled={sent}
+            aria-live="polite"
+          >
             {submitLabel}
           </button>
         </form>
@@ -146,7 +151,12 @@ export default function Reserve() {
               placeholder="Occasion, a song you want cued."
             />
           </label>
-          <button type="submit" className={`btn btn-primary ${styles.submitMobile}`}>
+          <button
+            type="submit"
+            className={`btn btn-primary ${styles.submitMobile}`}
+            disabled={sent}
+            aria-live="polite"
+          >
             {submitLabel}
           </button>
         </form>

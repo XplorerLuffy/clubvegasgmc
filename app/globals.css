@@ -69,6 +69,33 @@ img {
   max-width: 100%;
 }
 
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--gold);
+  color: #1a1410;
+  font: 600 13px/1 var(--font-body), sans-serif;
+  border-radius: 6px;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.skip-link:hover,
+.skip-link:focus {
+  color: #1a1410;
+}
+
 /* ---- shared building blocks ---- */
 
 .font-display {
@@ -124,11 +151,25 @@ img {
   background: linear-gradient(180deg, var(--gold), var(--gold-2) 55%, var(--gold-3));
   color: #1a1410;
   box-shadow: 0 0 0 1px rgba(233, 192, 101, 0.45), 0 14px 30px -10px rgba(212, 164, 55, 0.55);
+  animation: vgs-glow 3.2s ease-in-out infinite;
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 0 0 1px rgba(233, 192, 101, 0.65), 0 18px 36px -10px rgba(212, 164, 55, 0.7);
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary {
+    animation: none;
+  }
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .btn-secondary {

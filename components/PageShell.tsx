@@ -8,7 +8,9 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
     <>
       <MobileTopBar />
       <SiteHeader />
-      <div style={{ background: "var(--surface)" }}>{children}</div>
+      <main id="main-content" style={{ background: "var(--surface)" }}>
+        {children}
+      </main>
       <Footer />
       <MobileStickyBar />
     </>

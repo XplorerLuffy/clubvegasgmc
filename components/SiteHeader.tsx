@@ -1,16 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { navLinks } from "@/lib/site-config";
 import styles from "./SiteHeader.module.css";
-
-const NAV_LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/karaoke", label: "Karaoke" },
-  { href: "/drinks", label: "Drinks" },
-  { href: "/nights", label: "Nights" },
-  { href: "/find-us", label: "Find Us" },
-];
 
 export default function SiteHeader() {
   const pathname = usePathname();
@@ -19,19 +13,30 @@ export default function SiteHeader() {
     <div className={styles.bar}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand}>
-          <img className={styles.logo} src="/assets/vegas-logo.jpeg" alt="Vegas Lounge & Bar" />
+          <Image
+            className={styles.logo}
+            src="/assets/vegas-logo.jpeg"
+            alt="Vegas Lounge & Bar"
+            width={34}
+            height={34}
+            priority
+          />
           <span className={styles.brandName}>Vegas</span>
         </Link>
         <nav className={styles.links} aria-label="Primary">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.link} ${pathname === link.href ? styles.linkActive : ""}`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`${styles.link} ${active ? styles.linkActive : ""}`}
+                aria-current={active ? "page" : undefined}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
         <Link href="/reserve" className={styles.reserveBtn}>
           Reserve

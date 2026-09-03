@@ -1,5 +1,9 @@
+import Image from "next/image";
+import { business } from "@/lib/site-config";
 import ImagePlaceholder from "./ImagePlaceholder";
 import styles from "./FindUs.module.css";
+
+const [hoursWeekday, hoursWeekend, hoursSunday, hoursMonday] = business.hours;
 
 export default function FindUs() {
   return (
@@ -18,50 +22,57 @@ export default function FindUs() {
             <div className={styles.infoBlock}>
               <span className="eyebrow">Address</span>
               <span className={styles.infoValue}>
-                Riverside Block, Gelephu
+                {business.addressLines[0]}
                 <br />
-                Mindfulness City, Sarpang
+                {business.addressLines[1]}
               </span>
             </div>
             <div className={styles.infoBlock}>
               <span className="eyebrow">Hours</span>
               <span className={styles.infoValue}>
-                Tue–Thu · 5pm – 1am
+                {hoursWeekday.days} · {hoursWeekday.time}
                 <br />
-                Fri–Sat · 5pm – 2am
+                {hoursWeekend.days} · {hoursWeekend.time}
                 <br />
-                Sun · 5pm – 12am · Mon closed
+                {hoursSunday.days} · {hoursSunday.time} · {hoursMonday.days} closed
               </span>
             </div>
             <div className={styles.infoBlock}>
               <span className="eyebrow">Reach us</span>
               <span className={styles.infoValue}>
-                +975 17 00 00 00
+                {business.phone}
                 <br />
-                hello@vegaslounge.bt
+                {business.email}
               </span>
             </div>
             <div className={styles.infoBlock}>
               <span className="eyebrow">Age policy</span>
-              <span className={styles.infoValue}>
-                All ages until 9pm.
-                <br />
-                18+ with photo ID after.
-              </span>
+              <span className={styles.infoValue}>{business.agePolicy}</span>
             </div>
           </div>
           <div className={styles.ctaRow}>
-            <button type="button" className="btn btn-primary">
+            <a
+              href={business.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               Get Directions
-            </button>
-            <button type="button" className="btn btn-secondary">
+            </a>
+            <a href={business.phoneHref} className="btn btn-secondary">
               Call the Bar
-            </button>
+            </a>
           </div>
         </div>
         <div className={styles.map}>
           <ImagePlaceholder label="Dark-styled map of Gelephu Mindfulness City" />
-          <img className={styles.mapPin} src="/assets/vegas-logo.jpeg" alt="" />
+          <Image
+            className={styles.mapPin}
+            src="/assets/vegas-logo.jpeg"
+            alt=""
+            width={56}
+            height={56}
+          />
         </div>
       </div>
 
@@ -74,41 +85,52 @@ export default function FindUs() {
         </h2>
         <div className={styles.mapMobile}>
           <ImagePlaceholder label="Dark-styled map" />
-          <img className={styles.mapPinMobile} src="/assets/vegas-logo.jpeg" alt="" />
+          <Image
+            className={styles.mapPinMobile}
+            src="/assets/vegas-logo.jpeg"
+            alt=""
+            width={44}
+            height={44}
+          />
         </div>
         <div className={styles.infoListMobile}>
           <div className={styles.infoBlock}>
             <span className="eyebrow">Address</span>
-            <span className={styles.infoValueMobile}>
-              Riverside Block, Gelephu Mindfulness City, Sarpang
-            </span>
+            <span className={styles.infoValueMobile}>{business.addressFull}</span>
           </div>
           <div className={styles.infoBlock}>
             <span className="eyebrow">Hours</span>
             <span className={styles.infoValueMobile}>
-              Tue–Thu · 5pm – 1am
+              {hoursWeekday.days} · {hoursWeekday.time}
               <br />
-              Fri–Sat · 5pm – 2am
+              {hoursWeekend.days} · {hoursWeekend.time}
               <br />
-              Sun · 5pm – 12am · Monday closed
+              {hoursSunday.days} · {hoursSunday.time} · {hoursMonday.days} closed
             </span>
           </div>
           <div className={styles.infoBlock}>
             <span className="eyebrow">Age policy</span>
-            <span className={styles.infoValueMobile}>All ages until 9pm. 18+ with photo ID after.</span>
+            <span className={styles.infoValueMobile}>{business.agePolicy}</span>
           </div>
           <div className={styles.infoBlock}>
             <span className="eyebrow">Reach us</span>
-            <span className={styles.infoValueMobile}>+975 17 00 00 00 · hello@vegaslounge.bt</span>
+            <span className={styles.infoValueMobile}>
+              {business.phone} · {business.email}
+            </span>
           </div>
         </div>
         <div className={styles.ctaColMobile}>
-          <button type="button" className="btn btn-primary">
+          <a
+            href={business.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             Get Directions
-          </button>
-          <button type="button" className="btn btn-secondary">
+          </a>
+          <a href={business.phoneHref} className="btn btn-secondary">
             Call the Bar
-          </button>
+          </a>
         </div>
       </div>
     </section>

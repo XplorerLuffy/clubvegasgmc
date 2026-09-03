@@ -1,25 +1,105 @@
-# CODING AGENTS: READ THIS FIRST
+# Vegas Lounge & Bar
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+A karaoke bar & lounge site for Gelephu Mindfulness City, Bhutan — private
+rooms, an open stage, cocktails, and a weekly lineup. Built with
+[Next.js](https://nextjs.org) (App Router, TypeScript) from a
+[Claude Design](https://claude.ai/design) mockup.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## Stack
 
-## What you should do — IMPORTANT
+- **Next.js 14** (App Router) + **TypeScript**, strict mode
+- Plain **CSS Modules** — no CSS framework, design tokens live in
+  `app/globals.css` (`:root` custom properties for color/type)
+- **`next/font`** for Cormorant Garamond (display) + Outfit (body)
+- **`next/image`** for the logo everywhere it appears
+- Auto-generated **OG image**, **sitemap.xml**, **robots.txt**, and
+  **JSON-LD** business schema — no manual assets to keep in sync
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+No database, no backend, no auth. The reservation form is a client-only
+stub (see [Known gaps](#known-gaps-before-launch) below).
 
-**Read `project/Vegas Lounge & Bar.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## Getting started
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint
+```
 
-## About the design files
+## Project structure
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+```
+app/
+  layout.tsx          root layout: fonts, metadata, JSON-LD, skip link
+  page.tsx             home (hero + nights ticker + gallery)
+  about/ karaoke/ drinks/ nights/ find-us/ reserve/
+                        one route per nav item, each a thin page that
+                        wraps its section component in <PageShell>
+  sitemap.ts robots.ts opengraph-image.tsx icon.jpg
+  not-found.tsx error.tsx
+  globals.css           design tokens, resets, shared button/eyebrow classes
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+components/
+  Hero, About, Karaoke, Drinks, Nights, Gallery, FindUs, Reserve
+                        one section = one component + its .module.css
+  SiteHeader            sticky desktop nav used on every page except home
+                        (home's nav lives inside the Hero's own overlay)
+  MobileTopBar          sticky mobile header + slide-down menu
+  MobileStickyBar        sticky mobile "Book a Table" bar
+  PageShell             composes MobileTopBar + SiteHeader + <main> +
+                        Footer + MobileStickyBar around a page's section
+  ImagePlaceholder      styled stand-in for a real photo (see below)
 
-## Bundle contents
+lib/
+  site-config.ts        single source of truth: business NAP (address,
+                        phone, hours, socials), nav links, and the three
+                        content toggles below
+```
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Vegas karaoke site mockups` project files (HTML prototypes, assets, components)
+## Content toggles
+
+`lib/site-config.ts` exports `siteConfig`:
+
+| Field | Default | What it does |
+|---|---|---|
+| `showNightsMarquee` | `true` | Show/hide the scrolling nights ticker under the hero |
+| `nightsView` | `"list"` | `"list"` or `"cards"` layout for the Nights page (desktop only — mobile is always a compact list) |
+| `songCount` | `"12,000"` | The song-book count shown on the Karaoke page |
+
+Business info (address, phone, email, hours, social links) lives in the
+same file's `business` export and is used everywhere it appears (Footer,
+Find Us, Hero, the JSON-LD schema) — change it once, it updates
+everywhere.
+
+## Photos
+
+Every photo slot (hero background, gallery, rooms, drinks, map) is a
+styled placeholder (`<ImagePlaceholder label="..." />`) — a dashed
+frame with an icon and a caption naming the shot, not a real photo. Swap
+one in by replacing the `<ImagePlaceholder>` with a real `next/image`
+(or `<img>`) using the same `label` text as a guide for what to shoot.
+The logo (`public/assets/vegas-logo.jpeg`) is the one real asset.
+
+## Known gaps before launch
+
+- **Reservation form** doesn't send anywhere yet — it flips to a "Sent"
+  state locally on submit. Wire `handleSubmit` in `components/Reserve.tsx`
+  to a real endpoint (email, a booking API, etc.) before going live.
+- **Domain**: SEO metadata, the sitemap, and JSON-LD all resolve from
+  `siteConfig.url`, which reads `NEXT_PUBLIC_SITE_URL` and falls back to
+  a placeholder (`vegasloungebar.bt`). Set the real env var before
+  deploying.
+- **Social links** (Instagram/Facebook/TikTok) are `#` placeholders in
+  `business.socials` — fill in real URLs when the accounts exist.
+- **Favicon**: `app/icon.jpg` is the full logo photo, auto-scaled by
+  Next.js. A properly cropped square icon would look sharper at 16–32px.
+- **Map**: the Find Us page has a placeholder instead of an embedded map
+  — swap in a real Google/Mapbox embed once you have an API key.
+
+## Origin
+
+This app was implemented from a Claude Design handoff. The original
+mockup bundle (chat transcript + exported HTML prototypes) is preserved
+in `chats/` and `project/` for reference — it's not part of the running
+site.
