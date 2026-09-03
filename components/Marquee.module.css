@@ -1,0 +1,29 @@
+.band {
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  background: var(--ink-2);
+  overflow: hidden;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  white-space: nowrap;
+  animation: vgs-marquee 28s linear infinite;
+  font: 600 12px/1 var(--font-body), sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+}
+
+.item {
+  padding: 0 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

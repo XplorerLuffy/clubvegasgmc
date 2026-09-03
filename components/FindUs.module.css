@@ -1,0 +1,126 @@
+.section {
+  padding: 96px 64px;
+  background: var(--ink-2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.heading {
+  font: 600 clamp(28px, 3.2vw, 42px) / 1.15 var(--font-display), serif;
+  color: var(--cream);
+}
+
+.heading em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.infoValue {
+  font: 400 16px/1.5 var(--font-body), sans-serif;
+  color: var(--body);
+}
+
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.map {
+  position: relative;
+  height: 460px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 164, 55, 0.25);
+}
+
+.mapPin {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 3px var(--ink-2), 0 0 26px rgba(233, 192,101, 0.7);
+}
+
+/* mobile */
+
+.sectionMobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .section {
+    display: none;
+  }
+  .sectionMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 52px 22px;
+    background: var(--ink-2);
+  }
+  .mapMobile {
+    position: relative;
+    height: 220px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 164, 55, 0.25);
+    margin-top: 4px;
+  }
+  .mapPinMobile {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 3px var(--ink-2), 0 0 22px rgba(233, 192,101, 0.7);
+  }
+  .infoListMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 4px;
+  }
+  .infoValueMobile {
+    font: 400 15px/1.5 var(--font-body), sans-serif;
+    color: var(--body);
+  }
+  .ctaColMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+}

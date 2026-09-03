@@ -1,0 +1,96 @@
+.footer {
+  padding: 56px 64px;
+  background: var(--ink);
+  border-top: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brandName {
+  font: 700 15px/1 var(--font-body), sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.brandAddr {
+  font: 400 13px/1 var(--font-body), sans-serif;
+  color: var(--faint);
+}
+
+.links {
+  display: flex;
+  gap: 26px;
+  font: 500 13px/1 var(--font-body), sans-serif;
+  color: var(--muted);
+}
+
+.links a {
+  color: inherit;
+}
+
+.footerMobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .footer {
+    display: none;
+  }
+  .footerMobile {
+    padding: 34px 22px 26px;
+    background: var(--ink);
+    border-top: 1px solid var(--border-gold);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+  .logoMobile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .brandNameMobile {
+    font: 700 12px/1 var(--font-body), sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .linksMobile {
+    display: flex;
+    gap: 20px;
+    font: 500 12px/1 var(--font-body), sans-serif;
+    color: var(--muted);
+  }
+  .linksMobile a {
+    color: inherit;
+  }
+  .noteMobile {
+    font: 400 11px/1.4 var(--font-body), sans-serif;
+    color: var(--faint);
+  }
+}
