@@ -1,14 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import styles from "./MobileTopBar.module.css";
 
 const LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#karaoke", label: "Karaoke" },
-  { href: "#drinks", label: "Drinks" },
-  { href: "#nights", label: "Nights" },
-  { href: "#find-us", label: "Find Us" },
+  { href: "/about", label: "About" },
+  { href: "/karaoke", label: "Karaoke" },
+  { href: "/drinks", label: "Drinks" },
+  { href: "/nights", label: "Nights" },
+  { href: "/find-us", label: "Find Us" },
 ];
 
 export default function MobileTopBar() {
@@ -16,10 +17,10 @@ export default function MobileTopBar() {
 
   return (
     <div className={styles.bar}>
-      <div className={styles.brand}>
+      <Link href="/" className={styles.brand}>
         <img className={styles.brandLogo} src="/assets/vegas-logo.jpeg" alt="" />
         <span className={styles.brandName}>Vegas</span>
-      </div>
+      </Link>
       <div className={styles.right}>
         <span className={styles.status}>
           <span className="status-dot" />
@@ -40,22 +41,22 @@ export default function MobileTopBar() {
       {open && (
         <nav className={styles.menu} aria-label="Mobile">
           {LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className={styles.menuLink}
               onClick={() => setOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#reserve"
+          <Link
+            href="/reserve"
             className={`btn btn-primary ${styles.menuCta}`}
             onClick={() => setOpen(false)}
           >
             Reserve
-          </a>
+          </Link>
         </nav>
       )}
     </div>

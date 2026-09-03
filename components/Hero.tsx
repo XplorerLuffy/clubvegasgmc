@@ -1,12 +1,13 @@
+import Link from "next/link";
 import ImagePlaceholder from "./ImagePlaceholder";
 import styles from "./Hero.module.css";
 
 const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#karaoke", label: "Karaoke" },
-  { href: "#drinks", label: "Drinks" },
-  { href: "#nights", label: "Nights" },
-  { href: "#find-us", label: "Find Us" },
+  { href: "/about", label: "About" },
+  { href: "/karaoke", label: "Karaoke" },
+  { href: "/drinks", label: "Drinks" },
+  { href: "/nights", label: "Nights" },
+  { href: "/find-us", label: "Find Us" },
 ];
 
 export default function Hero() {
@@ -22,20 +23,20 @@ export default function Hero() {
 
         <div className={styles.navWrap}>
           <div className={styles.navPill}>
-            <div className={styles.navBrand}>
+            <Link href="/" className={styles.navBrand}>
               <img className={styles.navLogo} src="/assets/vegas-logo.jpeg" alt="" />
               <span className={styles.navBrandName}>Vegas</span>
-            </div>
+            </Link>
             <nav className={styles.navLinks} aria-label="Primary">
               {NAV_LINKS.map((link) => (
-                <a key={link.href} href={link.href} className={styles.navLink}>
+                <Link key={link.href} href={link.href} className={styles.navLink}>
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
-            <a href="#reserve" className={styles.reserveBtn}>
+            <Link href="/reserve" className={styles.reserveBtn}>
               Reserve
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -52,12 +53,12 @@ export default function Hero() {
             until the last chorus.
           </p>
           <div className={styles.ctaRow}>
-            <a href="#reserve" className="btn btn-primary">
+            <Link href="/reserve" className="btn btn-primary">
               Book a Table
-            </a>
-            <a href="#nights" className="btn btn-secondary">
+            </Link>
+            <Link href="/nights" className="btn btn-secondary">
               See Tonight&rsquo;s Lineup
-            </a>
+            </Link>
           </div>
           <div className={styles.meta}>
             <span className={styles.metaItem}>
@@ -88,12 +89,12 @@ export default function Hero() {
             Four private rooms, one open stage, twelve thousand songs.
           </p>
           <div className={styles.ctaColMobile}>
-            <a href="#reserve" className="btn btn-primary">
+            <Link href="/reserve" className="btn btn-primary">
               Book a Table
-            </a>
-            <a href="#nights" className="btn btn-secondary">
+            </Link>
+            <Link href="/nights" className="btn btn-secondary">
               See Tonight&rsquo;s Lineup
-            </a>
+            </Link>
           </div>
         </div>
       </header>

@@ -1,0 +1,74 @@
+.bar {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  background: rgba(20, 15, 11, 0.86);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-bottom: 1px solid var(--border-cream);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brandName {
+  font: 700 14px/1 var(--font-body), sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+}
+
+.link {
+  font: 500 13px/1 var(--font-body), sans-serif;
+  color: var(--body);
+}
+
+.linkActive {
+  color: var(--gold);
+}
+
+.reserveBtn {
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--gold), var(--gold-2) 60%, var(--gold-3));
+  color: #1a1410;
+  font: 600 12px/1 var(--font-body), sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: 861px) {
+  .bar {
+    display: flex;
+  }
+}

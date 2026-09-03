@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./MobileStickyBar.module.css";
 
 export default function MobileStickyBar() {
@@ -7,9 +8,9 @@ export default function MobileStickyBar() {
         <span className={styles.statusLine}>Open until 1am</span>
         <span className={styles.tonight}>Tonight · Live Band Karaoke</span>
       </div>
-      <a href="#reserve" className={`btn btn-primary ${styles.cta}`}>
+      <Link href="/reserve" className={`btn btn-primary ${styles.cta}`}>
         Book a Table
-      </a>
+      </Link>
     </div>
   );
 }

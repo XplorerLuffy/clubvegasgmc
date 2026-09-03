@@ -68,6 +68,12 @@
     align-items: center;
     text-align: center;
   }
+  .footerMobileBrand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
   .logoMobile {
     width: 48px;
     height: 48px;
