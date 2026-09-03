@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<![CDATA[<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#0B0806;font-family:'Outfit',system-ui,sans-serif}
+a{color:#E9C065;text-decoration:none}
+a:hover{color:#F6EFE0}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(246,239,224,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#F6EFE0;color:#1A1410;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 'Outfit',sans-serif;color:#F6EFE0}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(246,239,224,.12);color:#F6EFE0;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 'Outfit',sans-serif;color:rgba(246,239,224,.55)}
+.dv-card{max-width:100%;background:#1A1410;border:1px solid rgba(246,239,224,.08);border-radius:8px;box-shadow:0 18px 40px -20px rgba(0,0,0,.75);overflow:hidden}
+.dv-opt:target .dv-oid{background:#D4A437;color:#1A1410}
+.dv-next{margin:22px 0 0;font:12px/1.5 'Outfit',sans-serif;color:rgba(246,239,224,.45)}
+@keyframes vgs-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes vgs-bulb{0%,100%{opacity:1}50%{opacity:.42}}
+@keyframes vgs-neon{0%,100%{opacity:1}44%{opacity:.94}46%{opacity:.62}48%{opacity:.97}}
+@keyframes vgs-glow{0%,100%{box-shadow:0 0 0 1px rgba(233,192,101,.45),0 14px 30px -10px rgba(212,164,55,.5)}50%{box-shadow:0 0 0 1px rgba(233,192,101,.7),0 16px 40px -8px rgba(212,164,55,.8)}}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Vegas Lounge &amp; Bar — three hero treatments, then the full page on desktop and mobile</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Hero — Marquee. Bulb-framed type, showtime energy.</div>
+<div class="dv-card" style="width:1280px">
+<div style="position:relative;height:680px;background:radial-gradient(90% 70% at 50% 110%,rgba(212,140,60,.22),transparent 60%),#100B08;overflow:hidden;display:flex;flex-direction:column">
+<div style="position:absolute;inset:0;opacity:.16"><image-slot id="v-1a-bg" shape="rect" fit="cover" placeholder="Stage / bar photo, warm amber"></image-slot></div>
+<div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 45%,transparent 30%,rgba(0,0,0,.75) 100%);pointer-events:none"></div>
+<div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:24px 48px;gap:32px">
+<div style="display:flex;align-items:center;gap:14px"><img src="assets/vegas-logo.jpeg" alt="Vegas Lounge &amp; Bar" style="width:58px;height:58px;border-radius:50%;object-fit:cover;box-shadow:0 0 28px rgba(233,192,101,.45)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Lounge &amp; Bar</span></div>
+<div style="display:flex;align-items:center;gap:28px"><span style="font:500 13px/1 'Outfit',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D9CDB6">Karaoke</span><span style="font:500 13px/1 'Outfit',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D9CDB6">Drinks</span><span style="font:500 13px/1 'Outfit',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D9CDB6">Nights</span><span style="font:500 13px/1 'Outfit',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#D9CDB6">Find Us</span></div>
+</div>
+<div style="position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:0 48px 40px">
+<div style="border:1px solid rgba(212,164,55,.4);border-radius:6px;padding:34px 56px 30px;position:relative;background:rgba(16,11,8,.35)">
+<div style="position:absolute;left:18px;right:18px;top:-5px;height:10px;background-image:radial-gradient(circle,#E9C065 0 3.5px,transparent 4px);background-size:26px 10px;background-position:center;animation:vgs-bulb 2.4s var(--ease-in-out,ease-in-out) infinite;filter:drop-shadow(0 0 6px rgba(233,192,101,.8))"></div>
+<div style="position:absolute;left:18px;right:18px;bottom:-5px;height:10px;background-image:radial-gradient(circle,#E9C065 0 3.5px,transparent 4px);background-size:26px 10px;background-position:center;animation:vgs-bulb 2.4s ease-in-out .8s infinite;filter:drop-shadow(0 0 6px rgba(233,192,101,.8))"></div>
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.34em;color:#D4A437;text-align:center;margin-bottom:14px">Gelephu Mindfulness City · Tonight</div>
+<div style="font:800 clamp(64px,8vw,116px)/.92 'Outfit',sans-serif;letter-spacing:.02em;text-transform:uppercase;text-align:center;background:linear-gradient(180deg,#F6EFE0 0%,#E9C065 46%,#A57B1F 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(212,164,55,.35))">Vegas</div>
+<div style="font:500 italic clamp(22px,2.4vw,30px)/1.2 'Cormorant Garamond',serif;color:#F6EFE0;text-align:center;margin-top:6px">Sing like the lights are on you.</div>
+</div>
+<p style="font:400 17px/1.55 'Outfit',sans-serif;color:#D9CDB6;max-width:560px;text-align:center;margin:0;text-wrap:pretty">A lounge, an open stage, and four private rooms. Pick a song. We'll dim the lights.</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+<button style="padding:17px 30px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;animation:vgs-glow 3.2s ease-in-out infinite">Book a Table</button>
+<button style="padding:17px 30px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:transparent;color:#E9C065;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer" style-hover="background:#D4A437;color:#1A1410;border-color:#D4A437">See Tonight's Lineup</button>
+</div>
+<div style="display:flex;align-items:center;gap:14px;font:400 13px/1 'Outfit',sans-serif;color:#9C8E78"><span style="display:flex;align-items:center;gap:7px"><span style="width:6px;height:6px;border-radius:50%;background:#6B7A2E;box-shadow:0 0 10px #6B7A2E"></span>Open until 1am</span><span>·</span><span>Live band karaoke Thursdays</span><span>·</span><span>18+ after 9pm</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Hero — Cinematic. Photo-first, the seal carries the brand.</div>
+<div class="dv-card" style="width:1280px">
+<div style="position:relative;height:680px;background:#100B08;overflow:hidden;display:flex;flex-direction:column">
+<div style="position:absolute;inset:0"><image-slot id="v-1b-bg" shape="rect" fit="cover" placeholder="Room shot: stage, mic, amber haze"></image-slot></div>
+<div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,transparent 35%,rgba(0,0,0,.6) 100%);pointer-events:none"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,8,6,.55) 0%,transparent 30%,rgba(11,8,6,.85) 100%);pointer-events:none"></div>
+<div style="position:relative;padding:22px 40px;display:flex;justify-content:center">
+<div style="display:flex;align-items:center;gap:32px;padding:12px 14px 12px 18px;border-radius:999px;background:rgba(26,20,16,.55);backdrop-filter:blur(18px) saturate(140%);border:1px solid rgba(246,239,224,.1)">
+<div style="display:flex;align-items:center;gap:11px"><img src="assets/vegas-logo.jpeg" alt="" style="width:36px;height:36px;border-radius:50%;object-fit:cover"><span style="font:700 14px/1 'Outfit',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#F6EFE0">Vegas</span></div>
+<div style="display:flex;gap:24px"><span style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">About</span><span style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Karaoke</span><span style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Drinks</span><span style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Nights</span><span style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Find Us</span></div>
+<button style="padding:11px 20px;border:0;border-radius:999px;background:linear-gradient(180deg,#E9C065,#D4A437 60%,#A57B1F);color:#1A1410;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Reserve</button>
+</div>
+</div>
+<div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:22px;padding:0 88px 72px;max-width:820px">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Karaoke lounge · Gelephu Mindfulness City</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h1 style="font:700 clamp(48px,5.6vw,80px)/1.02 'Cormorant Garamond',serif;letter-spacing:-.015em;color:#F6EFE0;margin:0">Sing like the lights<br><em style="color:#E9C065">are on you.</em></h1>
+<p style="font:400 18px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;max-width:520px;text-wrap:pretty">Four private rooms, one open stage, twelve thousand songs and a bar that stays warm until the last chorus.</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap">
+<button style="padding:17px 30px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 0 1px rgba(233,192,101,.45),0 14px 30px -10px rgba(212,164,55,.55)">Book a Table</button>
+<button style="padding:17px 30px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:rgba(26,20,16,.4);color:#E9C065;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">See Tonight's Lineup</button>
+</div>
+<div style="display:flex;align-items:center;gap:14px;font:400 13px/1 'Outfit',sans-serif;color:#9C8E78;padding-top:6px"><span style="display:flex;align-items:center;gap:7px"><span style="width:6px;height:6px;border-radius:50%;background:#6B7A2E;box-shadow:0 0 10px #6B7A2E"></span>Open · until 1am</span><span>·</span><span>Riverside Block, GMC</span><span>·</span><span>18+ after 9pm</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Hero — Neon script. The sign itself, glowing off the wall.</div>
+<div class="dv-card" style="width:1280px">
+<div style="position:relative;height:680px;background:linear-gradient(160deg,#1A0F0C 0%,#100B08 45%,#2A1410 100%);overflow:hidden;display:flex;flex-direction:column">
+<div style="position:absolute;inset:0;opacity:.1"><image-slot id="v-1c-bg" shape="rect" fit="cover" placeholder="Dark textured wall / velvet"></image-slot></div>
+<div style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(233,192,101,.22) 0%,rgba(212,140,60,.1) 45%,transparent 68%);pointer-events:none"></div>
+<div style="position:relative;display:flex;justify-content:space-between;align-items:center;padding:26px 48px">
+<span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.26em;color:#D4A437">Vegas Lounge &amp; Bar</span>
+<span style="font:400 12px/1 'Outfit',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9C8E78">Est. Gelephu · 18+</span>
+</div>
+<div style="position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:0 48px 48px">
+<div style="position:relative;width:300px;height:300px;border-radius:50%;display:flex;align-items:center;justify-content:center;animation:vgs-neon 6s ease-in-out infinite">
+<div style="position:absolute;inset:0;border-radius:50%;border:2px solid #E9C065;box-shadow:0 0 22px rgba(233,192,101,.75),0 0 70px rgba(212,164,55,.45),inset 0 0 40px rgba(212,140,60,.35)"></div>
+<img src="assets/vegas-logo.jpeg" alt="Vegas Lounge &amp; Bar" style="width:274px;height:274px;border-radius:50%;object-fit:cover">
+</div>
+<div style="text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center">
+<h1 style="font:500 italic clamp(38px,4.4vw,62px)/1.1 'Cormorant Garamond',serif;color:#F6EFE0;margin:0;text-shadow:0 0 26px rgba(233,192,101,.5)">Sing like the lights are on you.</h1>
+<div style="height:1px;width:120px;background:linear-gradient(90deg,transparent,#D4A437 30%,#D4A437 70%,transparent);opacity:.7"></div>
+<p style="font:400 17px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;max-width:520px;text-wrap:pretty">Private rooms, an open stage, and a host who knows exactly when to hand you the mic.</p>
+</div>
+<div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+<button style="padding:17px 32px;border:0;border-radius:999px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 0 1px rgba(233,192,101,.5),0 16px 36px -10px rgba(212,164,55,.6)">Book a Table</button>
+<button style="padding:17px 32px;border:1px solid rgba(212,164,55,.45);border-radius:999px;background:transparent;color:#E9C065;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">See Tonight's Lineup</button>
+</div>
+</div>
+<div style="position:relative;border-top:1px solid rgba(212,164,55,.28);background:rgba(11,8,6,.6);overflow:hidden;height:52px;display:flex;align-items:center">
+<div style="display:flex;white-space:nowrap;animation:vgs-marquee 26s linear infinite;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#D4A437">
+<span style="padding:0 22px">Tuesday · Open Mic</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Wednesday · Ladies' Night</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Thursday · Live Band Karaoke</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Friday · Host's Night</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Saturday · Vegas Saturdays</span><span style="padding:0 22px">·</span>
+<span style="padding:0 22px">Tuesday · Open Mic</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Wednesday · Ladies' Night</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Thursday · Live Band Karaoke</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Friday · Host's Night</span><span style="padding:0 22px">·</span><span style="padding:0 22px">Saturday · Vegas Saturdays</span><span style="padding:0 22px">·</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Full desktop page — built on the cinematic hero from <a class="dv-oid" href="#1b">1b</a>.</div>
+<div class="dv-card" style="width:1280px">
+<div style="background:#1A1410">
+
+<div style="position:relative;height:700px;overflow:hidden;display:flex;flex-direction:column;background:#100B08">
+<div style="position:absolute;inset:0"><image-slot id="v-pg-hero" shape="rect" fit="cover" placeholder="Hero: stage, mic, amber haze"></image-slot></div>
+<div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,transparent 35%,rgba(0,0,0,.6) 100%);pointer-events:none"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,8,6,.6) 0%,transparent 32%,rgba(11,8,6,.88) 100%);pointer-events:none"></div>
+<div style="position:relative;padding:22px 40px;display:flex;justify-content:center">
+<div style="display:flex;align-items:center;gap:32px;padding:12px 14px 12px 18px;border-radius:999px;background:rgba(26,20,16,.55);backdrop-filter:blur(18px) saturate(140%);border:1px solid rgba(246,239,224,.1)">
+<div style="display:flex;align-items:center;gap:11px"><img src="assets/vegas-logo.jpeg" alt="" style="width:36px;height:36px;border-radius:50%;object-fit:cover"><span style="font:700 14px/1 'Outfit',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#F6EFE0">Vegas</span></div>
+<div style="display:flex;gap:24px"><a href="#dk-about" style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">About</a><a href="#dk-karaoke" style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Karaoke</a><a href="#dk-drinks" style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Drinks</a><a href="#dk-nights" style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Nights</a><a href="#dk-find" style="font:500 13px/1 'Outfit',sans-serif;color:#D9CDB6">Find Us</a></div>
+<button style="padding:11px 20px;border:0;border-radius:999px;background:linear-gradient(180deg,#E9C065,#D4A437 60%,#A57B1F);color:#1A1410;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Reserve</button>
+</div>
+</div>
+<div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:20px;padding:0 88px 68px;max-width:820px">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Karaoke lounge · Gelephu Mindfulness City</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h1 style="font:700 clamp(48px,5.6vw,80px)/1.02 'Cormorant Garamond',serif;letter-spacing:-.015em;color:#F6EFE0;margin:0">Sing like the lights<br><em style="color:#E9C065">are on you.</em></h1>
+<p style="font:400 18px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;max-width:520px;text-wrap:pretty">Four private rooms, one open stage, twelve thousand songs and a bar that stays warm until the last chorus.</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap">
+<button style="padding:17px 30px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 0 1px rgba(233,192,101,.45),0 14px 30px -10px rgba(212,164,55,.55)">Book a Table</button>
+<button style="padding:17px 30px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:rgba(26,20,16,.4);color:#E9C065;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">See Tonight's Lineup</button>
+</div>
+<div style="display:flex;align-items:center;gap:14px;font:400 13px/1 'Outfit',sans-serif;color:#9C8E78;padding-top:4px"><span style="display:flex;align-items:center;gap:7px"><span style="width:6px;height:6px;border-radius:50%;background:#6B7A2E;box-shadow:0 0 10px #6B7A2E"></span>Open · until 1am</span><span>·</span><span>Riverside Block, GMC</span><span>·</span><span>18+ after 9pm</span></div>
+</div>
+</div>
+
+<sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+<div style="border-top:1px solid rgba(212,164,55,.28);border-bottom:1px solid rgba(212,164,55,.28);background:#100B08;overflow:hidden;height:56px;display:flex;align-items:center">
+<div style="display:flex;white-space:nowrap;animation:vgs-marquee 28s linear infinite;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#D4A437">
+<span style="padding:0 24px">Open Mic Tuesdays</span><span>·</span><span style="padding:0 24px">Ladies' Night Wednesdays</span><span>·</span><span style="padding:0 24px">Live Band Karaoke Thursdays</span><span>·</span><span style="padding:0 24px">Host's Night Fridays</span><span>·</span><span style="padding:0 24px">Vegas Saturdays till 2</span><span>·</span>
+<span style="padding:0 24px">Open Mic Tuesdays</span><span>·</span><span style="padding:0 24px">Ladies' Night Wednesdays</span><span>·</span><span style="padding:0 24px">Live Band Karaoke Thursdays</span><span>·</span><span style="padding:0 24px">Host's Night Fridays</span><span>·</span><span style="padding:0 24px">Vegas Saturdays till 2</span><span>·</span>
+</div>
+</div>
+</sc-if>
+
+<div id="dk-about" style="padding:96px 64px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:16px">
+<div style="grid-row:span 2"><image-slot id="v-pg-about1" shape="rounded" radius="18" placeholder="The bar at 9pm"></image-slot></div>
+<div><image-slot id="v-pg-about2" shape="rounded" radius="18" placeholder="Mic on the stand"></image-slot></div>
+<div><image-slot id="v-pg-about3" shape="rounded" radius="18" placeholder="Private room, lit low"></image-slot></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Our story</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">A room built for<br><em style="color:#E9C065">the second chorus.</em></h2>
+<p style="font:400 17px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;text-wrap:pretty">We opened with a borrowed sound system and one house rule — nobody sits through a whole evening without singing. The rule stuck. So did the crowd.</p>
+<p style="font:400 17px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;text-wrap:pretty">Come early for the pours, stay for the room that starts singing along with you. Gelephu's night voice, one song at a time.</p>
+<blockquote style="margin:8px 0 0;padding:20px 24px;background:#221A14;border-radius:18px;box-shadow:0 18px 40px -20px rgba(0,0,0,.75);border-top:1px solid rgba(246,239,224,.08);display:flex;flex-direction:column;gap:10px">
+<span style="font:500 italic 24px/1.3 'Cormorant Garamond',serif;color:#F6EFE0">Everyone can sing. Some just need the right room.</span>
+<span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.18em;color:#9C8E78">— The house rule</span>
+</blockquote>
+</div>
+</div>
+
+<div id="dk-karaoke" style="padding:96px 64px;background:#100B08;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The karaoke</div>
+<div style="height:1px;width:120px;background:linear-gradient(90deg,transparent,#D4A437 30%,#D4A437 70%,transparent);opacity:.7"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Two ways to take the mic.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 24px;background:#221A14;border-radius:18px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:700 28px/1 'Cormorant Garamond',serif;color:#D4A437">01</span><span style="font:600 18px/1.25 'Outfit',sans-serif;color:#F6EFE0">Pick your room — or the stage</span><span style="font:400 15px/1.55 'Outfit',sans-serif;color:#9C8E78">Book a private room by the hour, or sign the board at the door and wait for the host to call you up.</span></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 24px;background:#221A14;border-radius:18px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:700 28px/1 'Cormorant Garamond',serif;color:#D4A437">02</span><span style="font:600 18px/1.25 'Outfit',sans-serif;color:#F6EFE0">Search the book</span><span style="font:400 15px/1.55 'Outfit',sans-serif;color:#9C8E78">Twelve thousand tracks in Dzongkha, Nepali, Hindi, English and Korean. Queue from your phone at the table.</span></div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:28px 24px;background:#221A14;border-radius:18px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:700 28px/1 'Cormorant Garamond',serif;color:#D4A437">03</span><span style="font:600 18px/1.25 'Outfit',sans-serif;color:#F6EFE0">The host cues you in</span><span style="font:400 15px/1.55 'Outfit',sans-serif;color:#9C8E78">Lights down, key set, the room brought with you. Thursdays a live band plays behind you instead of a track.</span></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+<div style="position:relative;border-radius:18px;overflow:hidden;background:#221A14;cursor:pointer" style-hover="transform:translateY(-2px)"><div style="height:170px"><image-slot id="v-pg-room1" shape="rect" placeholder="The Sapphire room"></image-slot></div><div style="padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:600 20px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Sapphire</span><span style="font:400 13px/1.4 'Outfit',sans-serif;color:#9C8E78">4–6 guests · booth seating</span><div style="height:1px;background:rgba(212,164,55,.3)"></div><span style="font:600 20px/1 'Cormorant Garamond',serif;color:#E9C065">Nu 900 <span style="font:400 12px/1 'Outfit',sans-serif;color:#9C8E78">/ hour</span></span></div></div>
+<div style="position:relative;border-radius:18px;overflow:hidden;background:#221A14;cursor:pointer"><div style="height:170px"><image-slot id="v-pg-room2" shape="rect" placeholder="The Ruby room"></image-slot></div><div style="padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:600 20px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Ruby</span><span style="font:400 13px/1.4 'Outfit',sans-serif;color:#9C8E78">8–12 guests · own bar tab</span><div style="height:1px;background:rgba(212,164,55,.3)"></div><span style="font:600 20px/1 'Cormorant Garamond',serif;color:#E9C065">Nu 1,600 <span style="font:400 12px/1 'Outfit',sans-serif;color:#9C8E78">/ hour</span></span></div></div>
+<div style="position:relative;border-radius:18px;overflow:hidden;background:#221A14;cursor:pointer"><div style="height:170px"><image-slot id="v-pg-room3" shape="rect" placeholder="The Grand room"></image-slot></div><div style="padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:600 20px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Grand</span><span style="font:400 13px/1.4 'Outfit',sans-serif;color:#9C8E78">Up to 20 · full buyout available</span><div style="height:1px;background:rgba(212,164,55,.3)"></div><span style="font:600 20px/1 'Cormorant Garamond',serif;color:#E9C065">Nu 2,800 <span style="font:400 12px/1 'Outfit',sans-serif;color:#9C8E78">/ hour</span></span></div></div>
+<div style="position:relative;border-radius:18px;overflow:hidden;background:#221A14;border:1px solid rgba(212,164,55,.35)"><div style="height:170px"><image-slot id="v-pg-room4" shape="rect" placeholder="The main stage"></image-slot></div><div style="padding:20px;display:flex;flex-direction:column;gap:8px"><span style="font:600 20px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Main Stage</span><span style="font:400 13px/1.4 'Outfit',sans-serif;color:#9C8E78">Open floor · sign the board</span><div style="height:1px;background:rgba(212,164,55,.3)"></div><span style="font:600 20px/1 'Cormorant Garamond',serif;color:#E9C065">No charge</span></div></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:32px 36px;background:linear-gradient(90deg,#221A14,#2D231B);border-radius:18px;border-top:1px solid rgba(246,239,224,.08)">
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The song book</span>
+<span style="font:600 26px/1.2 'Cormorant Garamond',serif;color:#F6EFE0"><span style="color:#E9C065">{{ songCount }}</span> songs, five languages.</span>
+<span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Search before you come. Queue from the table when you're here.</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;flex:0 0 420px;padding:6px 6px 6px 20px;background:#100B08;border:1px solid rgba(212,164,55,.35);border-radius:12px">
+<span style="font:400 15px/1 'Outfit',sans-serif;color:#6A5F4F;flex:1">Search a title, artist or language…</span>
+<button style="padding:13px 22px;border:0;border-radius:8px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Browse</button>
+</div>
+</div>
+</div>
+
+<div id="dk-drinks" style="padding:96px 64px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The bar</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Pours worth staying for.</h2>
+</div>
+<button style="padding:15px 26px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:transparent;color:#E9C065;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap">See the Full Menu</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+<div style="border-radius:18px;overflow:hidden;background:#221A14;box-shadow:0 18px 40px -20px rgba(0,0,0,.75)"><div style="height:240px"><image-slot id="v-pg-drink1" shape="rect" placeholder="Amber cocktail, tight crop"></image-slot></div><div style="padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Signature cocktails</span><span style="font:600 24px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Neon Sour</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Local honey, lime, egg white, a long bitter finish.</span><div style="height:1px;background:rgba(212,164,55,.3);margin-top:2px"></div><span style="font:600 22px/1 'Cormorant Garamond',serif;color:#E9C065">from Nu 450</span></div></div>
+<div style="border-radius:18px;overflow:hidden;background:#221A14;box-shadow:0 18px 40px -20px rgba(0,0,0,.75)"><div style="height:240px"><image-slot id="v-pg-drink2" shape="rect" placeholder="Beer and glassware"></image-slot></div><div style="padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Beer &amp; wine</span><span style="font:600 24px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Cold, and kept that way</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Druk on tap, imported bottles, six wines by the glass.</span><div style="height:1px;background:rgba(212,164,55,.3);margin-top:2px"></div><span style="font:600 22px/1 'Cormorant Garamond',serif;color:#E9C065">from Nu 200</span></div></div>
+<div style="border-radius:18px;overflow:hidden;background:#221A14;box-shadow:0 18px 40px -20px rgba(0,0,0,.75);border:1px solid rgba(212,164,55,.3)"><div style="height:240px"><image-slot id="v-pg-drink3" shape="rect" placeholder="Bottle service, sparklers off"></image-slot></div><div style="padding:24px;display:flex;flex-direction:column;gap:10px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Bottle service</span><span style="font:600 24px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">A table of ten</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Your bottle, mixers, ice and a host who watches the glasses.</span><div style="height:1px;background:rgba(212,164,55,.3);margin-top:2px"></div><span style="font:600 22px/1 'Cormorant Garamond',serif;color:#E9C065">from Nu 6,500</span></div></div>
+</div>
+</div>
+
+<div id="dk-nights" style="padding:96px 64px;background:#100B08;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The week</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Every night has a name.</h2>
+</div>
+<sc-if value="{{ nightsAsList }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:120px 1fr 200px;gap:24px;align-items:center;padding:22px 8px;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Tuesday</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Open Mic</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Sign the board, three songs each, the room decides who gets a fourth.</span></div><span style="font:400 14px/1.4 'Outfit',sans-serif;color:#D9CDB6;text-align:right">8pm · No cover</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr 200px;gap:24px;align-items:center;padding:22px 8px;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Wednesday</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Ladies' Night</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">First cocktail on us, and the room stays yours until midnight.</span></div><span style="font:400 14px/1.4 'Outfit',sans-serif;color:#D9CDB6;text-align:right">7pm · First drink free</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr 200px;gap:24px;align-items:center;padding:22px 8px;border-bottom:1px solid rgba(212,164,55,.22);background:#1A1410"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#B83A36">Thursday · Tonight</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Live Band Karaoke</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">A four-piece behind you instead of a backing track. Book early — the stage fills.</span></div><span style="font:400 14px/1.4 'Outfit',sans-serif;color:#E9C065;text-align:right">9pm · Nu 300 cover</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr 200px;gap:24px;align-items:center;padding:22px 8px;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Friday</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Host's Night</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Our MC runs the room — duets, dares and a trophy nobody takes home.</span></div><span style="font:400 14px/1.4 'Outfit',sans-serif;color:#D9CDB6;text-align:right">9pm · No cover</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr 200px;gap:24px;align-items:center;padding:22px 8px;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Saturday</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Vegas Saturdays</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Rooms booked out by eight, stage running till two, bottle service all night.</span></div><span style="font:400 14px/1.4 'Outfit',sans-serif;color:#D9CDB6;text-align:right">Till 2am</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr 200px;gap:24px;align-items:center;padding:22px 8px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Sunday</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Sunday Slow</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Acoustic backing, half-price wine, everything a key lower.</span></div><span style="font:400 14px/1.4 'Outfit',sans-serif;color:#D9CDB6;text-align:right">6pm · Half-price wine</span></div>
+</div>
+</sc-if>
+<sc-if value="{{ nightsAsCards }}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+<div style="padding:26px;background:#221A14;border-radius:18px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Tuesday</span><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Open Mic</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Sign the board, three songs each.</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#E9C065">8pm · No cover</span></div>
+<div style="padding:26px;background:#221A14;border-radius:18px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Wednesday</span><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Ladies' Night</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">First cocktail on us.</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#E9C065">7pm · First drink free</span></div>
+<div style="padding:26px;background:#2D231B;border-radius:18px;display:flex;flex-direction:column;gap:10px;border:1px solid rgba(184,58,54,.5)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#B83A36">Thursday · Tonight</span><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Live Band Karaoke</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">A four-piece behind you.</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#E9C065">9pm · Nu 300 cover</span></div>
+<div style="padding:26px;background:#221A14;border-radius:18px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Friday</span><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Host's Night</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Our MC runs the room.</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#E9C065">9pm · No cover</span></div>
+<div style="padding:26px;background:#221A14;border-radius:18px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Saturday</span><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Vegas Saturdays</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Stage running till two.</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#E9C065">Till 2am</span></div>
+<div style="padding:26px;background:#221A14;border-radius:18px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(246,239,224,.08)"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Sunday</span><span style="font:600 24px/1.15 'Cormorant Garamond',serif;color:#F6EFE0">Sunday Slow</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78">Everything a key lower.</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#E9C065">6pm · Half-price wine</span></div>
+</div>
+</sc-if>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 32px;border:1px solid rgba(212,164,55,.35);border-radius:18px;background:radial-gradient(90% 200% at 0% 50%,rgba(212,140,60,.18),transparent 70%)">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Happy hour</span><span style="font:600 22px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Five to eight, every night. House pours at Nu 250.</span></div>
+<span style="font:400 14px/1.4 'Outfit',sans-serif;color:#9C8E78;white-space:nowrap">Mondays the mic is resting.</span>
+</div>
+</div>
+
+<div style="padding:96px 64px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Gallery</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Last Saturday, in frames.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:16px">
+<div style="grid-column:span 2;grid-row:span 2"><image-slot id="v-pg-g1" shape="rounded" radius="18" placeholder="Full room, mid-song"></image-slot></div>
+<div><image-slot id="v-pg-g2" shape="rounded" radius="18" placeholder="Mic in hand"></image-slot></div>
+<div style="grid-row:span 2"><image-slot id="v-pg-g3" shape="rounded" radius="18" placeholder="Bartender pouring"></image-slot></div>
+<div><image-slot id="v-pg-g4" shape="rounded" radius="18" placeholder="Neon sign detail"></image-slot></div>
+<div style="grid-column:span 2"><image-slot id="v-pg-g5" shape="rounded" radius="18" placeholder="Private room, full table"></image-slot></div>
+<div><image-slot id="v-pg-g6" shape="rounded" radius="18" placeholder="The band, Thursday"></image-slot></div>
+<div><image-slot id="v-pg-g7" shape="rounded" radius="18" placeholder="Last call"></image-slot></div>
+</div>
+</div>
+
+<div id="dk-find" style="padding:96px 64px;background:#100B08;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Find us</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Riverside Block,<br><em style="color:#E9C065">Gelephu.</em></h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;width:100%;margin-top:4px">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Address</span><span style="font:400 16px/1.5 'Outfit',sans-serif;color:#D9CDB6">Riverside Block, Gelephu<br>Mindfulness City, Sarpang</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Hours</span><span style="font:400 16px/1.5 'Outfit',sans-serif;color:#D9CDB6">Tue–Thu · 5pm – 1am<br>Fri–Sat · 5pm – 2am<br>Sun · 5pm – 12am · Mon closed</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Reach us</span><span style="font:400 16px/1.5 'Outfit',sans-serif;color:#D9CDB6">+975 17 00 00 00<br>hello@vegaslounge.bt</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Age policy</span><span style="font:400 16px/1.5 'Outfit',sans-serif;color:#D9CDB6">All ages until 9pm.<br>18+ with photo ID after.</span></div>
+</div>
+<div style="display:flex;gap:12px;margin-top:8px"><button style="padding:15px 26px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Get Directions</button><button style="padding:15px 26px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:transparent;color:#E9C065;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Call the Bar</button></div>
+</div>
+<div style="position:relative;height:460px;border-radius:18px;overflow:hidden;border:1px solid rgba(212,164,55,.25)">
+<image-slot id="v-pg-map" shape="rect" placeholder="Dark-styled map of Gelephu Mindfulness City"></image-slot>
+<div style="position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);pointer-events:none"><img src="assets/vegas-logo.jpeg" alt="" style="width:56px;height:56px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #100B08,0 0 26px rgba(233,192,101,.7)"></div>
+</div>
+</div>
+
+<div style="padding:96px 64px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+<div style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Reserve</div>
+<div style="height:1px;width:64px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 clamp(28px,3.2vw,42px)/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Tell us when.<br><em style="color:#E9C065">We'll hold the room.</em></h2>
+<p style="font:400 17px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;text-wrap:pretty">Rooms go first on Fridays and Saturdays — send this by Wednesday and we'll write back the same evening.</p>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:4px">
+<span style="display:flex;gap:10px;font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6"><span style="width:6px;height:6px;border-radius:50%;background:#D4A437;margin-top:8px;flex:none"></span>Private rooms held for 20 minutes past your time.</span>
+<span style="display:flex;gap:10px;font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6"><span style="width:6px;height:6px;border-radius:50%;background:#D4A437;margin-top:8px;flex:none"></span>Bottle service can be pre-ordered to the table.</span>
+<span style="display:flex;gap:10px;font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6"><span style="width:6px;height:6px;border-radius:50%;background:#D4A437;margin-top:8px;flex:none"></span>Stage slots aren't reservable — sign the board at the door.</span>
+</div>
+</div>
+<form onSubmit="{{ onSubmit }}" style="padding:32px;background:#221A14;border-radius:18px;border-top:1px solid rgba(246,239,224,.08);box-shadow:0 18px 40px -20px rgba(0,0,0,.75);display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Book a table</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#6A5F4F">We reply the same evening.</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Name<input type="text" placeholder="Your full name" style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Phone<input type="tel" placeholder="+975 …" style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Date<input type="date" style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Time<input type="time" style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Guests<input type="number" value="6" min="1" style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Room<select style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"><option>The Sapphire · 4–6</option><option>The Ruby · 8–12</option><option>The Grand · up to 20</option><option>Lounge table (no room)</option></select></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 11px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78;grid-column:span 2">Anything we should know<textarea rows="3" placeholder="Occasion, a song you want cued, dietary notes." style="padding:13px 14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1.5 'Outfit',sans-serif;resize:vertical"></textarea></label>
+</div>
+<button type="submit" style="padding:18px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 0 1px rgba(233,192,101,.45),0 14px 30px -10px rgba(212,164,55,.55)">{{ submitLabel }}</button>
+</form>
+</div>
+
+<div style="padding:56px 64px;background:#0B0806;border-top:1px solid rgba(212,164,55,.28);display:flex;align-items:center;justify-content:space-between;gap:32px">
+<div style="display:flex;align-items:center;gap:16px"><img src="assets/vegas-logo.jpeg" alt="" style="width:52px;height:52px;border-radius:50%;object-fit:cover"><div style="display:flex;flex-direction:column;gap:5px"><span style="font:700 15px/1 'Outfit',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#F6EFE0">Vegas Lounge &amp; Bar</span><span style="font:400 13px/1 'Outfit',sans-serif;color:#6A5F4F">Riverside Block, Gelephu Mindfulness City</span></div></div>
+<div style="display:flex;gap:26px;font:500 13px/1 'Outfit',sans-serif;color:#9C8E78"><span>Instagram</span><span>Facebook</span><span>TikTok</span><span>Full drinks menu</span><span>Song book</span></div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1e">
+<div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Full mobile page — the one most people will actually see.</div>
+<div class="dv-card" style="width:390px;border-radius:32px">
+<div style="position:relative;background:#1A1410">
+
+<div style="position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:rgba(26,20,16,.72);backdrop-filter:blur(18px) saturate(140%);border-bottom:1px solid rgba(246,239,224,.1)">
+<div style="display:flex;align-items:center;gap:9px"><img src="assets/vegas-logo.jpeg" alt="" style="width:32px;height:32px;border-radius:50%;object-fit:cover"><span style="font:700 12px/1 'Outfit',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#F6EFE0">Vegas</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="font:600 10px/1 'Outfit',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#6B7A2E;display:flex;align-items:center;gap:6px"><span style="width:5px;height:5px;border-radius:50%;background:#6B7A2E;box-shadow:0 0 8px #6B7A2E"></span>Open</span><div style="display:flex;flex-direction:column;gap:4px;padding:9px 8px;border:1px solid rgba(246,239,224,.14);border-radius:8px"><span style="width:16px;height:1.5px;background:#F6EFE0"></span><span style="width:16px;height:1.5px;background:#F6EFE0"></span></div></div>
+</div>
+
+<div style="position:relative;height:560px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;background:#100B08">
+<div style="position:absolute;inset:0"><image-slot id="v-mb-hero" shape="rect" fit="cover" placeholder="Hero, vertical crop"></image-slot></div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,8,6,.45) 0%,transparent 25%,rgba(11,8,6,.92) 78%);pointer-events:none"></div>
+<div style="position:relative;padding:0 22px 34px;display:flex;flex-direction:column;gap:16px">
+<img src="assets/vegas-logo.jpeg" alt="Vegas Lounge &amp; Bar" style="width:88px;height:88px;border-radius:50%;object-fit:cover;box-shadow:0 0 34px rgba(233,192,101,.5)">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Karaoke lounge · Gelephu</div>
+<h1 style="font:700 40px/1.05 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Sing like the lights <em style="color:#E9C065">are on you.</em></h1>
+<p style="font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6;margin:0;text-wrap:pretty">Four private rooms, one open stage, twelve thousand songs.</p>
+<div style="display:flex;flex-direction:column;gap:10px">
+<button style="padding:17px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 0 1px rgba(233,192,101,.45),0 14px 30px -10px rgba(212,164,55,.55)">Book a Table</button>
+<button style="padding:17px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:rgba(26,20,16,.5);color:#E9C065;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">See Tonight's Lineup</button>
+</div>
+</div>
+</div>
+
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 22px;background:#100B08;border-top:1px solid rgba(212,164,55,.28);border-bottom:1px solid rgba(212,164,55,.28)">
+<span style="font:400 12px/1.3 'Outfit',sans-serif;color:#D9CDB6">Tonight · Live Band Karaoke</span>
+<span style="font:600 11px/1 'Outfit',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E9C065">9pm</span>
+</div>
+
+<div style="padding:52px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Our story</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">A room built for <em style="color:#E9C065">the second chorus.</em></h2>
+<p style="font:400 16px/1.55 'Outfit',sans-serif;color:#D9CDB6;margin:0;text-wrap:pretty">We opened with a borrowed sound system and one house rule — nobody sits through a whole evening without singing. The rule stuck. So did the crowd.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:10px;margin-top:4px"><div><image-slot id="v-mb-a1" shape="rounded" radius="14" placeholder="The bar at 9pm"></image-slot></div><div><image-slot id="v-mb-a2" shape="rounded" radius="14" placeholder="Mic on the stand"></image-slot></div></div>
+<blockquote style="margin:6px 0 0;padding:18px 20px;background:#221A14;border-radius:14px;display:flex;flex-direction:column;gap:8px"><span style="font:500 italic 21px/1.3 'Cormorant Garamond',serif;color:#F6EFE0">Everyone can sing. Some just need the right room.</span><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.18em;color:#9C8E78">— The house rule</span></blockquote>
+</div>
+
+<div style="padding:52px 22px;background:#100B08;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The karaoke</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Two ways to take the mic.</h2>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:4px">
+<div style="display:flex;gap:14px;padding:18px;background:#221A14;border-radius:14px"><span style="font:700 22px/1 'Cormorant Garamond',serif;color:#D4A437;flex:none">01</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.25 'Outfit',sans-serif;color:#F6EFE0">Pick your room — or the stage</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Book a room by the hour, or sign the board at the door.</span></div></div>
+<div style="display:flex;gap:14px;padding:18px;background:#221A14;border-radius:14px"><span style="font:700 22px/1 'Cormorant Garamond',serif;color:#D4A437;flex:none">02</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.25 'Outfit',sans-serif;color:#F6EFE0">Search the book</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">{{ songCount }} tracks in five languages. Queue from your phone.</span></div></div>
+<div style="display:flex;gap:14px;padding:18px;background:#221A14;border-radius:14px"><span style="font:700 22px/1 'Cormorant Garamond',serif;color:#D4A437;flex:none">03</span><div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 16px/1.25 'Outfit',sans-serif;color:#F6EFE0">The host cues you in</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Thursdays a live band plays behind you instead of a track.</span></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+<div style="border-radius:14px;overflow:hidden;background:#221A14"><div style="height:150px"><image-slot id="v-mb-r1" shape="rect" placeholder="The Sapphire"></image-slot></div><div style="padding:16px;display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="display:flex;flex-direction:column;gap:4px"><span style="font:600 19px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Sapphire</span><span style="font:400 12px/1.3 'Outfit',sans-serif;color:#9C8E78">4–6 guests · booth seating</span></div><span style="font:600 17px/1 'Cormorant Garamond',serif;color:#E9C065;white-space:nowrap">Nu 900/hr</span></div></div>
+<div style="border-radius:14px;overflow:hidden;background:#221A14"><div style="height:150px"><image-slot id="v-mb-r2" shape="rect" placeholder="The Ruby"></image-slot></div><div style="padding:16px;display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="display:flex;flex-direction:column;gap:4px"><span style="font:600 19px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Ruby</span><span style="font:400 12px/1.3 'Outfit',sans-serif;color:#9C8E78">8–12 guests · own bar tab</span></div><span style="font:600 17px/1 'Cormorant Garamond',serif;color:#E9C065;white-space:nowrap">Nu 1,600/hr</span></div></div>
+<div style="border-radius:14px;overflow:hidden;background:#221A14"><div style="height:150px"><image-slot id="v-mb-r3" shape="rect" placeholder="The Grand"></image-slot></div><div style="padding:16px;display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="display:flex;flex-direction:column;gap:4px"><span style="font:600 19px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Grand</span><span style="font:400 12px/1.3 'Outfit',sans-serif;color:#9C8E78">Up to 20 · buyouts</span></div><span style="font:600 17px/1 'Cormorant Garamond',serif;color:#E9C065;white-space:nowrap">Nu 2,800/hr</span></div></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border:1px solid rgba(212,164,55,.35);border-radius:14px"><div style="display:flex;flex-direction:column;gap:4px"><span style="font:600 19px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Main Stage</span><span style="font:400 12px/1.3 'Outfit',sans-serif;color:#9C8E78">Open floor · sign the board</span></div><span style="font:600 15px/1 'Cormorant Garamond',serif;color:#E9C065;white-space:nowrap">No charge</span></div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;padding:6px 6px 6px 16px;background:#1A1410;border:1px solid rgba(212,164,55,.35);border-radius:10px;margin-top:6px"><span style="font:400 14px/1 'Outfit',sans-serif;color:#6A5F4F;flex:1">Search the song book…</span><button style="padding:12px 16px;border:0;border-radius:7px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 11px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Browse</button></div>
+</div>
+
+<div style="padding:52px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The bar</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Pours worth staying for.</h2>
+<div style="display:flex;flex-direction:column;gap:14px;margin-top:4px">
+<div style="border-radius:14px;overflow:hidden;background:#221A14"><div style="height:180px"><image-slot id="v-mb-d1" shape="rect" placeholder="Amber cocktail"></image-slot></div><div style="padding:18px;display:flex;flex-direction:column;gap:8px"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Signature cocktails</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">The Neon Sour</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Local honey, lime, egg white, a long bitter finish.</span><div style="height:1px;background:rgba(212,164,55,.3)"></div><span style="font:600 19px/1 'Cormorant Garamond',serif;color:#E9C065">from Nu 450</span></div></div>
+<div style="border-radius:14px;overflow:hidden;background:#221A14"><div style="height:180px"><image-slot id="v-mb-d2" shape="rect" placeholder="Bottle service"></image-slot></div><div style="padding:18px;display:flex;flex-direction:column;gap:8px"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Bottle service</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">A table of ten</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Your bottle, mixers, ice and a host who watches the glasses.</span><div style="height:1px;background:rgba(212,164,55,.3)"></div><span style="font:600 19px/1 'Cormorant Garamond',serif;color:#E9C065">from Nu 6,500</span></div></div>
+</div>
+<button style="padding:16px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:transparent;color:#E9C065;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">See the Full Menu</button>
+</div>
+
+<div style="padding:52px 22px;background:#100B08;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">The week</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Every night has a name.</h2>
+<div style="display:flex;flex-direction:column;margin-top:4px">
+<div style="display:flex;flex-direction:column;gap:5px;padding:16px 0;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Tuesday · 8pm</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Open Mic</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Sign the board, three songs each.</span></div>
+<div style="display:flex;flex-direction:column;gap:5px;padding:16px 0;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Wednesday · 7pm</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Ladies' Night</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">First cocktail on us, room yours till midnight.</span></div>
+<div style="display:flex;flex-direction:column;gap:5px;padding:16px;margin:8px 0;border-radius:12px;background:#221A14;border:1px solid rgba(184,58,54,.45)"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#B83A36">Thursday · Tonight · 9pm</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Live Band Karaoke</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">A four-piece behind you instead of a backing track. Nu 300 cover.</span></div>
+<div style="display:flex;flex-direction:column;gap:5px;padding:16px 0;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Friday · 9pm</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Host's Night</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Our MC runs the room — duets, dares, a trophy nobody keeps.</span></div>
+<div style="display:flex;flex-direction:column;gap:5px;padding:16px 0;border-bottom:1px solid rgba(212,164,55,.22)"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Saturday · till 2am</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Vegas Saturdays</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Rooms booked out by eight. Book ahead.</span></div>
+<div style="display:flex;flex-direction:column;gap:5px;padding:16px 0"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Sunday · 6pm</span><span style="font:600 21px/1.2 'Cormorant Garamond',serif;color:#F6EFE0">Sunday Slow</span><span style="font:400 14px/1.5 'Outfit',sans-serif;color:#9C8E78">Acoustic backing, half-price wine.</span></div>
+</div>
+<div style="padding:18px;border:1px solid rgba(212,164,55,.35);border-radius:14px;display:flex;flex-direction:column;gap:6px;background:radial-gradient(120% 200% at 0% 50%,rgba(212,140,60,.18),transparent 70%)"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Happy hour</span><span style="font:600 19px/1.25 'Cormorant Garamond',serif;color:#F6EFE0">Five to eight, every night. House pours at Nu 250.</span><span style="font:400 13px/1.4 'Outfit',sans-serif;color:#9C8E78">Mondays the mic is resting.</span></div>
+</div>
+
+<div style="padding:52px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Gallery</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Last Saturday, in frames.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:120px;gap:10px;margin-top:4px"><div style="grid-column:span 2;grid-row:span 2"><image-slot id="v-mb-g1" shape="rounded" radius="14" placeholder="Full room, mid-song"></image-slot></div><div><image-slot id="v-mb-g2" shape="rounded" radius="14" placeholder="Mic in hand"></image-slot></div><div><image-slot id="v-mb-g3" shape="rounded" radius="14" placeholder="Neon detail"></image-slot></div><div style="grid-column:span 2"><image-slot id="v-mb-g4" shape="rounded" radius="14" placeholder="The band, Thursday"></image-slot></div></div>
+</div>
+
+<div style="padding:52px 22px;background:#100B08;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Find us</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Riverside Block, <em style="color:#E9C065">Gelephu.</em></h2>
+<div style="position:relative;height:220px;border-radius:14px;overflow:hidden;border:1px solid rgba(212,164,55,.25);margin-top:4px"><image-slot id="v-mb-map" shape="rect" placeholder="Dark-styled map"></image-slot><div style="position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);pointer-events:none"><img src="assets/vegas-logo.jpeg" alt="" style="width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #100B08,0 0 22px rgba(233,192,101,.7)"></div></div>
+<div style="display:flex;flex-direction:column;gap:18px;margin-top:4px">
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Address</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6">Riverside Block, Gelephu Mindfulness City, Sarpang</span></div>
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Hours</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6">Tue–Thu · 5pm – 1am<br>Fri–Sat · 5pm – 2am<br>Sun · 5pm – 12am · Monday closed</span></div>
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Age policy</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6">All ages until 9pm. 18+ with photo ID after.</span></div>
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Reach us</span><span style="font:400 15px/1.5 'Outfit',sans-serif;color:#D9CDB6">+975 17 00 00 00 · hello@vegaslounge.bt</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;margin-top:4px"><button style="padding:16px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Get Directions</button><button style="padding:16px;border:1px solid rgba(212,164,55,.5);border-radius:10px;background:transparent;color:#E9C065;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Call the Bar</button></div>
+</div>
+
+<div style="padding:52px 22px 40px;display:flex;flex-direction:column;gap:18px">
+<div style="font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:#D4A437">Reserve</div>
+<div style="height:1px;width:56px;background:linear-gradient(90deg,#D4A437,rgba(212,164,55,0))"></div>
+<h2 style="font:600 30px/1.15 'Cormorant Garamond',serif;color:#F6EFE0;margin:0">Tell us when. <em style="color:#E9C065">We'll hold the room.</em></h2>
+<p style="font:400 15px/1.5 'Outfit',sans-serif;color:#9C8E78;margin:0;text-wrap:pretty">Rooms go first on Fridays and Saturdays. We reply the same evening.</p>
+<form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:14px;padding:20px;background:#221A14;border-radius:16px;margin-top:4px">
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Name<input type="text" placeholder="Your full name" style="padding:14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Phone<input type="tel" placeholder="+975 …" style="padding:14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"></label>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Date<input type="date" style="padding:14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 14px/1 'Outfit',sans-serif"></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Guests<input type="number" value="6" min="1" style="padding:14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 14px/1 'Outfit',sans-serif"></label>
+</div>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Room<select style="padding:14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1 'Outfit',sans-serif"><option>The Sapphire · 4–6</option><option>The Ruby · 8–12</option><option>The Grand · up to 20</option><option>Lounge table (no room)</option></select></label>
+<label style="min-width:0;display:flex;flex-direction:column;gap:7px;font:600 10px/1 'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#9C8E78">Anything we should know<textarea rows="3" placeholder="Occasion, a song you want cued." style="padding:14px;box-sizing:border-box;width:100%;background:#100B08;border:1px solid rgba(246,239,224,.14);border-radius:4px;color:#F6EFE0;font:400 15px/1.5 'Outfit',sans-serif;resize:vertical"></textarea></label>
+<button type="submit" style="padding:17px;border:0;border-radius:10px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 13px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">{{ submitLabel }}</button>
+</form>
+</div>
+
+<div style="padding:34px 22px 26px;background:#0B0806;border-top:1px solid rgba(212,164,55,.28);display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+<img src="assets/vegas-logo.jpeg" alt="" style="width:48px;height:48px;border-radius:50%;object-fit:cover">
+<span style="font:700 12px/1 'Outfit',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#F6EFE0">Vegas Lounge &amp; Bar</span>
+<div style="display:flex;gap:20px;font:500 12px/1 'Outfit',sans-serif;color:#9C8E78"><span>Instagram</span><span>Facebook</span><span>TikTok</span></div>
+<span style="font:400 11px/1.4 'Outfit',sans-serif;color:#6A5F4F">Riverside Block, Gelephu Mindfulness City · 18+ after 9pm</span>
+</div>
+
+<div style="position:sticky;bottom:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px 16px 16px;background:rgba(11,8,6,.82);backdrop-filter:blur(18px);border-top:1px solid rgba(212,164,55,.28)">
+<div style="display:flex;flex-direction:column;gap:3px;flex:1"><span style="font:600 10px/1 'Outfit',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#6B7A2E">Open until 1am</span><span style="font:400 12px/1 'Outfit',sans-serif;color:#9C8E78">Tonight · Live Band Karaoke</span></div>
+<button style="padding:15px 22px;border:0;border-radius:999px;background:linear-gradient(180deg,#E9C065,#D4A437 55%,#A57B1F);color:#1A1410;font:600 12px/1 'Outfit',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 0 1px rgba(233,192,101,.45),0 12px 26px -10px rgba(212,164,55,.6)">Book a Table</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "build the full page on the marquee hero from <a class="dv-oid" href="#1a">1a</a>" · "swap the nights list for cards" · "add a song-book browse page and a full drinks menu page"</p>
+</section>]]>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Page&quot;},&quot;nightsView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;list&quot;,&quot;cards&quot;],&quot;default&quot;:&quot;list&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Page&quot;},&quot;songCount&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;12,000&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    const view = this.props.nightsView ?? 'list';
+    return {
+      showMarquee: this.props.showMarquee ?? true,
+      songCount: this.props.songCount ?? '12,000',
+      nightsAsList: view === 'list',
+      nightsAsCards: view === 'cards',
+      submitLabel: this.state.sent ? "Sent — we'll write back tonight" : 'Request the Table',
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
