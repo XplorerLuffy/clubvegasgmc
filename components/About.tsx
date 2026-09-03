@@ -1,4 +1,5 @@
 import ImagePlaceholder from "./ImagePlaceholder";
+import Reveal from "./Reveal";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -6,7 +7,7 @@ export default function About() {
     <section id="about">
       {/* Desktop */}
       <div className={styles.section}>
-        <div className={styles.collage}>
+        <Reveal className={styles.collage}>
           <div className={styles.collageMain}>
             <ImagePlaceholder label="The bar at 9pm" radius={18} />
           </div>
@@ -16,8 +17,8 @@ export default function About() {
           <div>
             <ImagePlaceholder label="Private room, lit low" radius={18} />
           </div>
-        </div>
-        <div className={styles.copy}>
+        </Reveal>
+        <Reveal className={styles.copy} delay={120}>
           <div className="eyebrow">Our story</div>
           <div className="rule" />
           <h2 className={styles.heading}>
@@ -39,7 +40,7 @@ export default function About() {
             </span>
             <span className={styles.quoteAttr}>— The house rule</span>
           </blockquote>
-        </div>
+        </Reveal>
       </div>
 
       {/* Mobile */}
@@ -53,14 +54,14 @@ export default function About() {
           We opened with a borrowed sound system and one house rule — nobody sits through a whole
           evening without singing. The rule stuck. So did the crowd.
         </p>
-        <div className={styles.collageMobile}>
+        <Reveal className={styles.collageMobile}>
           <div>
             <ImagePlaceholder label="The bar at 9pm" radius={14} />
           </div>
           <div>
             <ImagePlaceholder label="Mic on the stand" radius={14} />
           </div>
-        </div>
+        </Reveal>
         <blockquote className={styles.quoteMobile}>
           <span className={styles.quoteTextMobile}>
             Everyone can sing. Some just need the right room.

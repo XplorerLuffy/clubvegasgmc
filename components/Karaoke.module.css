@@ -62,11 +62,12 @@
   overflow: hidden;
   background: var(--card);
   cursor: pointer;
-  transition: transform 0.15s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .room:hover {
-  transform: translateY(-2px);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.75);
 }
 
 .roomFeatured {
@@ -76,6 +77,15 @@
 
 .roomPhoto {
   height: 170px;
+  overflow: hidden;
+}
+
+.roomPhoto > div {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.room:hover .roomPhoto > div {
+  transform: scale(1.06);
 }
 
 .roomBody {

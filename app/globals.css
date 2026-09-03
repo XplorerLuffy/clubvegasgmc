@@ -96,6 +96,28 @@ img {
   color: #1a1410;
 }
 
+/* ---- scroll reveal ---- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ---- shared building blocks ---- */
 
 .font-display {
@@ -184,6 +206,10 @@ img {
   border-color: var(--gold-2);
 }
 
+.btn:active {
+  transform: scale(0.97);
+}
+
 .status-dot {
   width: 6px;
   height: 6px;
@@ -210,6 +236,31 @@ img {
     box-shadow: 0 0 0 1px rgba(233, 192, 101, 0.45), 0 14px 30px -10px rgba(212, 164, 55, 0.5);
   }
   50% {
-    box-shadow: 0 0 0 1px rgba(233, 192, 101, 0.7), 0 16px 40px -8px rgba(212, 164, 55, 0.8);
+    box-shadow: 0 0 0 1.5px rgba(233, 192, 101, 0.9), 0 0 28px 4px rgba(233, 192, 101, 0.55),
+      0 18px 44px -8px rgba(212, 164, 55, 0.85);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Safety net: kill every animation/transition for anyone who asked for
+   less motion, even ones added later without their own explicit guard. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

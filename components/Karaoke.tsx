@@ -1,4 +1,5 @@
 import ImagePlaceholder from "./ImagePlaceholder";
+import Reveal from "./Reveal";
 import { siteConfig } from "@/lib/site-config";
 import styles from "./Karaoke.module.css";
 
@@ -29,25 +30,25 @@ const ROOMS = [
 export default function Karaoke() {
   return (
     <section id="karaoke" className={styles.section}>
-      <div className={styles.head}>
+      <Reveal className={styles.head}>
         <div className="eyebrow">The karaoke</div>
         <div className="rule-center" />
         <h2 className={styles.heading}>Two ways to take the mic.</h2>
-      </div>
+      </Reveal>
 
       <div className={styles.steps}>
-        {STEPS.map((step) => (
-          <div key={step.num} className={styles.step}>
+        {STEPS.map((step, i) => (
+          <Reveal key={step.num} className={styles.step} delay={i * 100}>
             <span className={styles.stepNum}>{step.num}</span>
             <span className={styles.stepTitle}>{step.title}</span>
             <span className={styles.stepBody}>{step.body}</span>
-          </div>
+          </Reveal>
         ))}
       </div>
 
       <div className={styles.rooms}>
-        {ROOMS.map((room) => (
-          <div key={room.name} className={styles.room}>
+        {ROOMS.map((room, i) => (
+          <Reveal key={room.name} className={styles.room} delay={i * 90}>
             <div className={styles.roomPhoto}>
               <ImagePlaceholder label={room.label} />
             </div>
@@ -59,9 +60,9 @@ export default function Karaoke() {
                 {room.price} <span className={styles.roomPriceUnit}>{room.unit}</span>
               </span>
             </div>
-          </div>
+          </Reveal>
         ))}
-        <div className={`${styles.room} ${styles.roomFeatured}`}>
+        <Reveal className={`${styles.room} ${styles.roomFeatured}`} delay={ROOMS.length * 90}>
           <div className={styles.roomPhoto}>
             <ImagePlaceholder label="The main stage" />
           </div>
@@ -71,10 +72,10 @@ export default function Karaoke() {
             <div className={styles.roomDivider} />
             <span className={styles.roomPrice}>No charge</span>
           </div>
-        </div>
+        </Reveal>
       </div>
 
-      <div className={styles.songBand}>
+      <Reveal className={styles.songBand}>
         <div className={styles.songCopy}>
           <div className="eyebrow">The song book</div>
           <h3 className={styles.songHeading}>
@@ -90,7 +91,7 @@ export default function Karaoke() {
             Browse
           </button>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

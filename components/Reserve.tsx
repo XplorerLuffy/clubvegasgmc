@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Reveal from "./Reveal";
 import styles from "./Reserve.module.css";
 
 const ROOM_OPTIONS = [
@@ -24,7 +25,7 @@ export default function Reserve() {
     <section id="reserve">
       {/* Desktop */}
       <div className={styles.section}>
-        <div className={styles.copy}>
+        <Reveal className={styles.copy}>
           <div className="eyebrow">Reserve</div>
           <div className="rule" />
           <h2 className={styles.heading}>
@@ -50,8 +51,9 @@ export default function Reserve() {
               Stage slots aren&rsquo;t reservable — sign the board at the door.
             </span>
           </div>
-        </div>
+        </Reveal>
 
+        <Reveal delay={120}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formHead}>
             <span className="eyebrow">Book a table</span>
@@ -104,6 +106,7 @@ export default function Reserve() {
             {submitLabel}
           </button>
         </form>
+        </Reveal>
       </div>
 
       {/* Mobile */}
@@ -116,6 +119,7 @@ export default function Reserve() {
         <p className={styles.pMobile}>
           Rooms go first on Fridays and Saturdays. We reply the same evening.
         </p>
+        <Reveal>
         <form className={styles.formMobile} onSubmit={handleSubmit}>
           <label className={styles.fieldMobile}>
             Name
@@ -160,6 +164,7 @@ export default function Reserve() {
             {submitLabel}
           </button>
         </form>
+        </Reveal>
       </div>
     </section>
   );

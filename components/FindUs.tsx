@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { business } from "@/lib/site-config";
 import ImagePlaceholder from "./ImagePlaceholder";
+import Reveal from "./Reveal";
 import styles from "./FindUs.module.css";
 
 const [hoursWeekday, hoursWeekend, hoursSunday, hoursMonday] = business.hours;
@@ -10,7 +11,7 @@ export default function FindUs() {
     <section id="find-us">
       {/* Desktop */}
       <div className={styles.section}>
-        <div className={styles.copy}>
+        <Reveal className={styles.copy}>
           <div className="eyebrow">Find us</div>
           <div className="rule" />
           <h2 className={styles.heading}>
@@ -63,8 +64,8 @@ export default function FindUs() {
               Call the Bar
             </a>
           </div>
-        </div>
-        <div className={styles.map}>
+        </Reveal>
+        <Reveal className={styles.map} delay={120}>
           <ImagePlaceholder label="Dark-styled map of Gelephu Mindfulness City" />
           <Image
             className={styles.mapPin}
@@ -73,7 +74,7 @@ export default function FindUs() {
             width={56}
             height={56}
           />
-        </div>
+        </Reveal>
       </div>
 
       {/* Mobile */}
@@ -83,7 +84,7 @@ export default function FindUs() {
         <h2 className={styles.heading}>
           Riverside Block, <em>Gelephu.</em>
         </h2>
-        <div className={styles.mapMobile}>
+        <Reveal className={styles.mapMobile}>
           <ImagePlaceholder label="Dark-styled map" />
           <Image
             className={styles.mapPinMobile}
@@ -92,8 +93,8 @@ export default function FindUs() {
             width={44}
             height={44}
           />
-        </div>
-        <div className={styles.infoListMobile}>
+        </Reveal>
+        <Reveal className={styles.infoListMobile} delay={120}>
           <div className={styles.infoBlock}>
             <span className="eyebrow">Address</span>
             <span className={styles.infoValueMobile}>{business.addressFull}</span>
@@ -118,7 +119,7 @@ export default function FindUs() {
               {business.phone} · {business.email}
             </span>
           </div>
-        </div>
+        </Reveal>
         <div className={styles.ctaColMobile}>
           <a
             href={business.mapsUrl}

@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
+import Reveal from "./Reveal";
 import styles from "./Nights.module.css";
 
 const NIGHTS = [
@@ -15,16 +16,20 @@ export default function Nights() {
 
   return (
     <section id="nights" className={styles.section}>
-      <div className={styles.head}>
+      <Reveal className={styles.head}>
         <div className="eyebrow">The week</div>
         <div className="rule" />
         <h2 className={styles.heading}>Every night has a name.</h2>
-      </div>
+      </Reveal>
 
       {view === "list" && (
         <div className={styles.list}>
-          {NIGHTS.map((n) => (
-            <div key={n.day} className={`${styles.row} ${n.tonight ? styles.rowTonight : ""}`}>
+          {NIGHTS.map((n, i) => (
+            <Reveal
+              key={n.day}
+              className={`${styles.row} ${n.tonight ? styles.rowTonight : ""}`}
+              delay={i * 55}
+            >
               <span className={`${styles.rowDay} ${n.tonight ? styles.rowDayTonight : ""}`}>
                 {n.day}
               </span>
@@ -35,43 +40,48 @@ export default function Nights() {
               <span className={`${styles.rowTime} ${n.tonight ? styles.rowTimeTonight : ""}`}>
                 {n.time}
               </span>
-            </div>
+            </Reveal>
           ))}
         </div>
       )}
 
       {view === "cards" && (
         <div className={styles.cards}>
-          {NIGHTS.map((n) => (
-            <div key={n.day} className={`${styles.card} ${n.tonight ? styles.cardTonight : ""}`}>
+          {NIGHTS.map((n, i) => (
+            <Reveal
+              key={n.day}
+              className={`${styles.card} ${n.tonight ? styles.cardTonight : ""}`}
+              delay={i * 55}
+            >
               <span className={`${styles.rowDay} ${n.tonight ? styles.rowDayTonight : ""}`}>
                 {n.day}
               </span>
               <span className={styles.cardTitle}>{n.title}</span>
               <span className={styles.cardBody}>{n.body}</span>
               <span className={styles.cardTime}>{n.time}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       )}
 
       {/* mobile always renders as a compact list, independent of the desktop view toggle */}
       <div className={styles.listMobile}>
-        {NIGHTS.map((n) => (
-          <div
+        {NIGHTS.map((n, i) => (
+          <Reveal
             key={n.day}
             className={`${styles.rowMobile} ${n.tonight ? styles.rowMobileTonight : ""}`}
+            delay={i * 55}
           >
             <span className={`${styles.rowDayMobile} ${n.tonight ? styles.rowDayMobileTonight : ""}`}>
               {n.day} · {n.time.split(" · ")[0]}
             </span>
             <span className={styles.rowTitleMobile}>{n.title}</span>
             <span className={styles.rowBodyMobile}>{n.body}</span>
-          </div>
+          </Reveal>
         ))}
       </div>
 
-      <div className={styles.happyHour}>
+      <Reveal className={styles.happyHour}>
         <div className={styles.happyHourCopy}>
           <div className="eyebrow">Happy hour</div>
           <span className={styles.happyHourHeading}>
@@ -79,7 +89,7 @@ export default function Nights() {
           </span>
         </div>
         <span className={styles.happyHourNote}>Mondays the mic is resting.</span>
-      </div>
+      </Reveal>
     </section>
   );
 }

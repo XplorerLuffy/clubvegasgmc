@@ -41,28 +41,32 @@ export default function MobileTopBar() {
         </button>
       </div>
 
-      {open && (
-        <nav className={styles.menu} aria-label="Mobile">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={styles.menuLink}
-              aria-current={pathname === link.href ? "page" : undefined}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+      <nav
+        className={`${styles.menu} ${open ? styles.menuOpen : ""}`}
+        aria-label="Mobile"
+        aria-hidden={!open}
+      >
+        {navLinks.map((link) => (
           <Link
-            href="/reserve"
-            className={`btn btn-primary ${styles.menuCta}`}
+            key={link.href}
+            href={link.href}
+            className={styles.menuLink}
+            aria-current={pathname === link.href ? "page" : undefined}
+            tabIndex={open ? 0 : -1}
             onClick={() => setOpen(false)}
           >
-            Reserve
+            {link.label}
           </Link>
-        </nav>
-      )}
+        ))}
+        <Link
+          href="/reserve"
+          className={`btn btn-primary ${styles.menuCta}`}
+          tabIndex={open ? 0 : -1}
+          onClick={() => setOpen(false)}
+        >
+          Reserve
+        </Link>
+      </nav>
     </div>
   );
 }

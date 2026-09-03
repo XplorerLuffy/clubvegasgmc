@@ -39,6 +39,12 @@
   overflow: hidden;
   background: var(--card);
   box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 52px -18px rgba(0, 0, 0, 0.85);
 }
 
 .cardFeatured {
@@ -47,6 +53,15 @@
 
 .photo {
   height: 240px;
+  overflow: hidden;
+}
+
+.photo > div {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .photo > div {
+  transform: scale(1.06);
 }
 
 .body {

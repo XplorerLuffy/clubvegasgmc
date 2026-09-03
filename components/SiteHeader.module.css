@@ -47,12 +47,40 @@
 }
 
 .link {
+  position: relative;
   font: 500 13px/1 var(--font-body), sans-serif;
   color: var(--body);
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link:hover {
+  color: var(--cream);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
 }
 
 .linkActive {
   color: var(--gold);
+}
+
+.linkActive::after {
+  transform: scaleX(1);
 }
 
 .reserveBtn {
@@ -65,6 +93,12 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reserveBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -8px rgba(212, 164, 55, 0.6);
 }
 
 @media (min-width: 861px) {

@@ -16,6 +16,22 @@
 .bg {
   position: absolute;
   inset: 0;
+  animation: hero-zoom 12s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg {
+    animation: none;
+  }
 }
 
 .scrimRadial {
@@ -37,6 +53,7 @@
   padding: 22px 40px;
   display: flex;
   justify-content: center;
+  animation: rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .navPill {
@@ -77,8 +94,32 @@
 }
 
 .navLink {
+  position: relative;
   font: 500 13px/1 var(--font-body), sans-serif;
   color: var(--body);
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navLink:hover {
+  color: var(--cream);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
 }
 
 .reserveBtn {
@@ -91,6 +132,12 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reserveBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -8px rgba(212, 164, 55, 0.6);
 }
 
 .content {
@@ -109,12 +156,14 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--gold-2);
+  animation: rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
 .headline {
   font: 700 clamp(48px, 5.6vw, 80px) / 1.02 var(--font-display), serif;
   letter-spacing: -0.015em;
   color: var(--cream);
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
 
 .headline em {
@@ -127,12 +176,14 @@
   color: var(--body);
   max-width: 520px;
   text-wrap: pretty;
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
 }
 
 .ctaRow {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.46s both;
 }
 
 .meta {
@@ -142,6 +193,7 @@
   font: 400 13px/1 var(--font-body), sans-serif;
   color: var(--faint);
   padding-top: 4px;
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both;
 }
 
 .metaItem {
@@ -196,11 +248,13 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 34px rgba(233, 192, 101, 0.5);
+  animation: rise-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .headlineMobile {
   font: 700 40px/1.05 var(--font-display), serif;
   color: var(--cream);
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
 }
 
 .headlineMobile em {
@@ -212,12 +266,14 @@
   font: 400 15px/1.5 var(--font-body), sans-serif;
   color: var(--body);
   text-wrap: pretty;
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
 }
 
 .ctaColMobile {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  animation: rise-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.46s both;
 }
 
 .tonightLabel {

@@ -1,10 +1,11 @@
 import ImagePlaceholder from "./ImagePlaceholder";
+import Reveal from "./Reveal";
 import styles from "./Drinks.module.css";
 
 export default function Drinks() {
   return (
     <section id="drinks" className={styles.section}>
-      <div className={styles.head}>
+      <Reveal className={styles.head} as="div">
         <div className={styles.headCopy}>
           <div className="eyebrow">The bar</div>
           <div className="rule" />
@@ -13,10 +14,10 @@ export default function Drinks() {
         <button type="button" className={`btn btn-secondary ${styles.menuBtn}`}>
           See the Full Menu
         </button>
-      </div>
+      </Reveal>
 
       <div className={styles.grid}>
-        <div className={styles.card}>
+        <Reveal className={styles.card} delay={0}>
           <div className={styles.photo}>
             <ImagePlaceholder label="Amber cocktail, tight crop" />
           </div>
@@ -27,9 +28,9 @@ export default function Drinks() {
             <div className={styles.divider} />
             <span className={styles.price}>from Nu 450</span>
           </div>
-        </div>
+        </Reveal>
 
-        <div className={`${styles.card} ${styles.cardBeer}`}>
+        <Reveal className={`${styles.card} ${styles.cardBeer}`} delay={90}>
           <div className={styles.photo}>
             <ImagePlaceholder label="Beer and glassware" />
           </div>
@@ -40,9 +41,9 @@ export default function Drinks() {
             <div className={styles.divider} />
             <span className={styles.price}>from Nu 200</span>
           </div>
-        </div>
+        </Reveal>
 
-        <div className={`${styles.card} ${styles.cardFeatured}`}>
+        <Reveal className={`${styles.card} ${styles.cardFeatured}`} delay={180}>
           <div className={styles.photo}>
             <ImagePlaceholder label="Bottle service, sparklers off" />
           </div>
@@ -55,7 +56,7 @@ export default function Drinks() {
             <div className={styles.divider} />
             <span className={styles.price}>from Nu 6,500</span>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
